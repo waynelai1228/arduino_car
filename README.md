@@ -17,4 +17,6 @@ Table below shows how they are represented in different context
 | PD5 | OC0B | D5 |
 | PD6 | OC0A | D6 |
 
-I plan to use CTC mode to create the PWN signal
+Due to the nature of motor, I decided that Fast PWM mode is best suited to drive the motors.
+The output must be cleared at compare match and set at bottom
+With this design, the OCRnx value will directly correspond with the speed the motor is turning: 0 being not turning and 0xFF at the highest.
